@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Journal from "./pages/Journal";
 import Benefits from "./components/Benefits";
+import ChatWithAI from "./pages/ChatWithAI";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="features/community" element={<Community />} />
           <Route path="features/journal" element={<Journal />} />
           <Route path="benefits" element={<Benefits />} />
+          <Route path="ai-chat" element={<ChatWithAI />} />
 
           
           <Route path="testimonials" element={<Testimonials />} />

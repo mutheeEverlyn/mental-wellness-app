@@ -50,10 +50,8 @@ function Navbar() {
         >
           <li className="nav-item">
             <NavLink
-              exact
               to="/"
-              activeClassName="active"
-              className="nav-links text-gray-300"
+              className={({ isActive }) => `nav-links text-gray-300${isActive ? ' active' : ''}`}
               onClick={handleClick}
             >
               Home
@@ -61,10 +59,8 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <NavLink
-              exact
               to="/features"
-              activeClassName="active"
-              className="nav-links text-gray-300"
+              className={({ isActive }) => `nav-links text-gray-300${isActive ? ' active' : ''}`}
               onClick={handleClick}
             >
               Features
@@ -77,21 +73,32 @@ function Navbar() {
 
           <li className="nav-item">
             <NavLink
-              exact
               to="/testimonials"
-              activeClassName="active"
-              className="nav-links text-gray-300"
+              className={({ isActive }) => `nav-links text-gray-300${isActive ? ' active' : ''}`}
               onClick={handleClick}
             >
              Testimonials
             </NavLink>
           </li>
 
-{user ?  <li className="nav-item">
-            <button onClick={onLogout}>
-              LogOut
-            </button>
-          </li>  : null}
+{user ? (
+  <>
+    <li className="nav-item">
+      <NavLink
+        to="/ai-chat"
+        className={({ isActive }) => `nav-links text-gray-300${isActive ? ' active' : ''}`}
+        onClick={handleClick}
+      >
+        AI Chat
+      </NavLink>
+    </li>
+    <li className="nav-item">
+      <button onClick={onLogout}>
+        LogOut
+      </button>
+    </li>
+  </>
+) : null}
 
          
 

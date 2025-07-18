@@ -7,6 +7,7 @@ const port = process.env.PORT
 const phq9Routes = require('./routes/phq9Routes')
 const userRoutes = require('./routes/userRoute')
 const testimonialRoutes = require('./routes/testimonialRoutes')
+const aiChatRoutes = require('./routes/aiChatRoutes');
 const User = require('./models/userModel');
 const jwt = require('jsonwebtoken');
 
@@ -41,6 +42,7 @@ app.use(async (req, res, next) => {
 app.use('/phq9', phq9Routes);
 app.use('/user', userRoutes)
 app.use('/testimonials', testimonialRoutes);
+app.use('/ai-chat', aiChatRoutes);
 
 
 app.listen(port, () => {
