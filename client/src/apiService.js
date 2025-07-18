@@ -18,7 +18,8 @@ const submitPHQ9 = async (userId, date, responses, token) => {
 
 // Fetch all testimonials
 export const fetchTestimonials = async () => {
-  const response = await axios.get("/testimonials");
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+  const response = await axios.get(`${API_URL}/testimonials`);
   return response.data;
 };
 
