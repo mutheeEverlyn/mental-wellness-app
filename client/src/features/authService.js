@@ -1,13 +1,8 @@
 import axios from 'axios'
 
-const registerRoute = "https://mental-wellness-app-3ry5.onrender.com/user/sign"
-
-
-const loginRoute =    "https://mental-wellness-app-3ry5.onrender.comuser/login"
-
-
-
-
+const API_URL = "https://mental-wellness-app-3ry5.onrender.com";
+const registerRoute = `${API_URL}/user/sign`;
+const loginRoute = `${API_URL}/user/login`;
 
 // Register user
 const register = async (userData) => {
@@ -38,8 +33,8 @@ const logout = () => {
 
 const authService = {
   register,
-  logout,
   login,
+  logout,
 }
 
-export default authService
+export default authService;

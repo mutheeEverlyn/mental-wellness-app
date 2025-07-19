@@ -14,7 +14,11 @@ const jwt = require('jsonwebtoken');
 
 connectDB()
 
-app.use(cors())
+const corsOptions = {
+  origin: 'https://mental-wellness-app-two.vercel.app',
+  credentials: true
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 

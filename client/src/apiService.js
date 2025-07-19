@@ -1,8 +1,10 @@
 import axios from 'axios'
 
+const API_URL = 'https://mental-wellness-app-3ry5.onrender.com';
+
 const submitPHQ9 = async (userId, date, responses, token) => {
   const response = await axios.post(
-    "https://mental-wellness-backend.vercel.app/phq9/submit",
+    `${API_URL}/phq9/submit`,
     { userId, date, responses },
     { headers: { Authorization: `Bearer ${token}` } }
   );
@@ -18,7 +20,6 @@ const submitPHQ9 = async (userId, date, responses, token) => {
 
 // Fetch all testimonials
 export const fetchTestimonials = async () => {
-  const API_URL = import.meta.env.VITE_API_URL || "https://mental-wellness-app-3ry5.onrender.com";
   const response = await axios.get(`${API_URL}/testimonials`);
   return response.data;
 };
@@ -26,7 +27,7 @@ export const fetchTestimonials = async () => {
 // Submit a testimonial (requires JWT token)
 export const submitTestimonial = async (job, review, rating, token) => {
   const response = await axios.post(
-    "/testimonials",
+    `${API_URL}/testimonials`,
     { job, review, rating },
     { headers: { Authorization: `Bearer ${token}` } }
   );
