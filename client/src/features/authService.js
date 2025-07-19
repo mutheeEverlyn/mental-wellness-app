@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const registerRoute = "http://localhost:3000/user/sign"
+const registerRoute = "https://mental-wellness-app-3ry5.onrender.com/user/sign"
 
 
-const loginRoute =    "http://localhost:3000/user/login"
+const loginRoute =    "https://mental-wellness-app-3ry5.onrender.comuser/login"
 
 
 

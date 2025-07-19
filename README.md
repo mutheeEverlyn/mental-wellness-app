@@ -1,17 +1,39 @@
 
-# BetterMind
+# BetterMind - Mental Wellness App
 
-BetterMind is a mental wellness web application that helps users improve their mental health through meditation, mindfulness exercises, emotional support, and self-assessment tools. The platform provides personalized features for users to track and manage their mental health journey.
+## Overview
+AI-powered mental wellness platform for stress, anxiety, and emotional well-being.
 
 ## Features
+- AI Chat for mental wellness
+- Mood tracking
+- Guided meditations
+- Journaling
+- Community testimonials
 
-- **Meditation**: Access guided meditation sessions to improve mental clarity and focus.
+## Setup Instructions
+1. Clone the repo
+2. Set up backend and frontend environment variables
+3. Install dependencies (`pnpm install` or `npm install` in both `client/` and `server/`)
+4. Start backend and frontend
 
-- **Mental Health Assessment**: Complete self-assessments like PHQ-9 to evaluate depression severity.
+## API Documentation
+- See `server/routes/` for endpoint details
+- Example: `POST /ai-chat`, `GET /testimonials`, etc.
 
-- **Mindfulness**: Learn mindfulness techniques for stress relief and emotional balance.
+## User Guide
+- Register/login
+- Use AI chat for support
+- Track mood and journal
+- Submit/view testimonials
 
-- **User Authentication**: Secure login and registration system with options to log out.
+## Technical Architecture
+- Frontend: React, Redux, Tailwind CSS
+- Backend: Node.js, Express, MongoDB
+- AI: OpenAI API
+
+## Contributing
+Pull requests welcome!
 
 
 
