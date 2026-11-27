@@ -181,4 +181,3 @@ This project is licensed under the MIT License - see the [MIT](https://chooseali
 - **Real-time Emotional Support Chatbot**: Integrate a mental health AI chatbot that would provide real-time conversations and emotional support to users based on their input.
 
 - **Emotion Recognition from Video or Audio**: Use emotion recognition AI models to analyze users’ facial expressions or voice tone during video/audio assessments to determine emotional states.
-
